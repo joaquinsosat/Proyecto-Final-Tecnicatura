@@ -447,7 +447,7 @@ footer {
 
 /* FIN: CSS DE INICIO */
 
-/* INICIO: CSS DE TIENDA */
+/* INICIO: CSS DE  */
 
 .productos-catalogo {
     margin-top: 30px;
@@ -463,7 +463,7 @@ footer {
     display: grid;
 }
 
-.filtros-tienda {
+.filtros- {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -587,7 +587,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .filtros-tienda {
+    .filtros- {
         flex-direction: column;
         gap: 15px;
     }
@@ -605,7 +605,7 @@ footer {
     }
 }
 
-/* FIN: CSS DE TIENDA */
+/* FIN: CSS DE  */
 
 /* INICIO: CSS DE PRÓXIMAMENTE */
 
@@ -1774,59 +1774,48 @@ footer {
     }
 }
 
-/* SOSA ARRGELE LA TIENDA*/
+/* SOSA ARRGELE LA */
 
-@media (min-width: 501px) and (max-width: 768px) {
+@media (max-width: 768px) {
     
+    /* 1. MÓVILES (De 768px hacia abajo, incluyendo iPhone 13) */
     .tienda-page .producto-grid { 
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 10px; 
-        padding: 0 5px; 
-    }
-
-    .tienda-page .producto-card h3 {
-        font-size: 0.8rem; 
-        margin: 5px 0 2px 0;
-        white-space: nowrap; 
-        overflow: hidden; 
-        text-overflow: ellipsis; 
-    }
-
-    .tienda-page .producto-card .precio {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 500px) {
-
-    .tienda-page .producto-grid { 
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important; /* ¡FUERZA 2 COLUMNAS! */
         gap: 15px; 
         padding: 0 10px;
     }
 
+    /* 2. Reducción de tamaño para asegurar que quepan */
     .tienda-page .producto-card h3 {
-        font-size: 0.95rem; 
-        margin: 8px 0 4px 0;
+        font-size: 0.9rem; 
         white-space: nowrap; 
         overflow: hidden; 
         text-overflow: ellipsis; 
     }
-
-    .tienda-page .producto-card .precio {
-        font-size: 1rem;
-    }
     
-    .tienda-page .filtro-busqueda-container { 
+    .tienda-page .producto-card .precio {
+        font-size: 0.95rem;
+    }
+
+    /* 3. Ajuste de filtros (Asegurando que ocupen el 100% de ancho) */
+    .tienda-page .filtros-tienda { 
         flex-direction: column; 
         gap: 10px;
         padding: 10px;
     }
+    .tienda-page .filtros-tienda > div {
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-    .tienda-page .filtro-busqueda-container input[type="text"],
-    .tienda-page .filtro-busqueda-container select,
-    .tienda-page .filtro-busqueda-container button {
-        width: 100%; 
+    .tienda-page .search-bar, 
+    .tienda-page .platform-selector {
+        width: 100%;
+    }
+    .tienda-page .search-bar input[type="text"],
+    .tienda-page .search-bar button {
+        /* Asegura que la barra y el botón de búsqueda ocupen todo el espacio */
+        width: 48%; /* Si quieres que estén uno al lado del otro */
         box-sizing: border-box;
     }
 }
@@ -1910,3 +1899,4 @@ footer {
         color: #fff;
     }
 }
+
