@@ -1774,52 +1774,58 @@ footer {
     }
 }
 
-/* SOSA ARRGELE LA */
+/* SOSA ARRGELE LA TEINDA */
 
-@media (max-width: 768px) {
+@media (max-width: 500px) { /* Rango de iPhone 13 */
     
-    /* 1. MÓVILES (De 768px hacia abajo, incluyendo iPhone 13) */
-    .tienda-page .producto-grid { 
+    /* Ultra-específico: Usamos main.tienda-page para ganar prioridad sobre otras reglas. */
+    main.tienda-page .producto-grid { 
         grid-template-columns: repeat(2, 1fr) !important; /* ¡FUERZA 2 COLUMNAS! */
         gap: 15px; 
         padding: 0 10px;
     }
 
-    /* 2. Reducción de tamaño para asegurar que quepan */
+    /* Reducir el tamaño de los elementos dentro de la tarjeta para que quepan */
     .tienda-page .producto-card h3 {
-        font-size: 0.9rem; 
+        font-size: 0.85rem; 
         white-space: nowrap; 
         overflow: hidden; 
         text-overflow: ellipsis; 
     }
     
     .tienda-page .producto-card .precio {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
-    /* 3. Ajuste de filtros (Asegurando que ocupen el 100% de ancho) */
+    /* Ajuste de filtros para que sean 100% de ancho */
     .tienda-page .filtros-tienda { 
         flex-direction: column; 
         gap: 10px;
         padding: 10px;
     }
-    .tienda-page .filtros-tienda > div {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
+    .tienda-page .filtros-tienda > div,
     .tienda-page .search-bar, 
     .tienda-page .platform-selector {
         width: 100%;
     }
     .tienda-page .search-bar input[type="text"],
     .tienda-page .search-bar button {
-        /* Asegura que la barra y el botón de búsqueda ocupen todo el espacio */
-        width: 48%; /* Si quieres que estén uno al lado del otro */
+        width: 48%; /* Para mantenerlos juntos */
         box-sizing: border-box;
     }
 }
 
+
+/* -------------------------------------------------------------------------- */
+/* REGLA para TABLETS PEQUEÑAS (Si quieres 3 columnas en ese rango, usa esto) */
+/* -------------------------------------------------------------------------- */
+@media (min-width: 501px) and (max-width: 768px) {
+    .tienda-page .producto-grid { 
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets */
+        gap: 10px; 
+        padding: 0 5px; 
+    }
+}
 /* JOAQUIN SOSA REDISEÑO ESTÉTICO DEL MENÚ HAMBURGUESA */
 
 @media (max-width: 768px) {
@@ -1899,4 +1905,5 @@ footer {
         color: #fff;
     }
 }
+
 
