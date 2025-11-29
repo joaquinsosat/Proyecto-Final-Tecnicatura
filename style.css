@@ -1776,54 +1776,56 @@ footer {
 
 /* SOSA ARRGELE LA TEINDA */
 
-@media (max-width: 500px) { /* Rango de iPhone 13 */
+@media (min-width: 501px) and (max-width: 768px) {
+    .tienda-page .producto-grid { 
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 10px; 
+        padding: 0 5px; 
+    }
+}
+
+
+/* REGLA para MÓVILES (<= 500px) - iPhone 13 y similares - 2 columnas */
+@media (max-width: 500px) { 
     
-    /* Ultra-específico: Usamos main.tienda-page para ganar prioridad sobre otras reglas. */
-    main.tienda-page .producto-grid { 
-        grid-template-columns: repeat(2, 1fr) !important; /* ¡FUERZA 2 COLUMNAS! */
-        gap: 15px; 
-        padding: 0 10px;
+    /* 1. LIBERACIÓN DEL ANCHO DEL CONTENEDOR PRINCIPAL */
+    main.tienda-page {
+        width: 100% !important; 
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
-    /* Reducir el tamaño de los elementos dentro de la tarjeta para que quepan */
+    /* 2. REGLA DE 2 COLUMNAS (Máxima Especificidad y Prioridad) */
+    main.tienda-page .producto-grid { 
+        grid-template-columns: repeat(2, 1fr) !important; /* ¡FUERZA 2 COLUMNAS! */
+        gap: 10px; 
+        padding: 0 5px; 
+    }
+
+    /* 3. REDUCCIÓN DE ELEMENTOS DENTRO DEL PRODUCTO para asegurar el espacio */
+    .tienda-page .producto-card {
+        padding: 3px; 
+    }
     .tienda-page .producto-card h3 {
-        font-size: 0.85rem; 
+        font-size: 0.75rem; /* El tamaño de fuente más pequeño para asegurar que quepa */
         white-space: nowrap; 
         overflow: hidden; 
         text-overflow: ellipsis; 
     }
     
     .tienda-page .producto-card .precio {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
-    /* Ajuste de filtros para que sean 100% de ancho */
+    /* 4. Ajuste de filtros para 100% de ancho */
     .tienda-page .filtros-tienda { 
         flex-direction: column; 
-        gap: 10px;
         padding: 10px;
     }
     .tienda-page .filtros-tienda > div,
     .tienda-page .search-bar, 
     .tienda-page .platform-selector {
-        width: 100%;
-    }
-    .tienda-page .search-bar input[type="text"],
-    .tienda-page .search-bar button {
-        width: 48%; /* Para mantenerlos juntos */
-        box-sizing: border-box;
-    }
-}
-
-
-/* -------------------------------------------------------------------------- */
-/* REGLA para TABLETS PEQUEÑAS (Si quieres 3 columnas en ese rango, usa esto) */
-/* -------------------------------------------------------------------------- */
-@media (min-width: 501px) and (max-width: 768px) {
-    .tienda-page .producto-grid { 
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets */
-        gap: 10px; 
-        padding: 0 5px; 
+        width: 100% !important;
     }
 }
 /* JOAQUIN SOSA REDISEÑO ESTÉTICO DEL MENÚ HAMBURGUESA */
@@ -1905,5 +1907,6 @@ footer {
         color: #fff;
     }
 }
+
 
 
