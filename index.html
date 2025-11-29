@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Imperio Gamer - Inicio</title>
     <link rel="icon" href="imagenes/Inicio/logoimperiokratos.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -30,7 +30,6 @@
 
 <main>
 
-
     <div class="hero-section">
         <h1 class="hero-title">El futuro del juego <span class="destacado-palabra">es digital</span></h1>
         <p class="hero-subtitle">Tu portal a la mayor biblioteca de juegos para todas las plataformas.</p>
@@ -38,50 +37,48 @@
     </div>
 
     <div class="video-gallery">
+        <div class="card">
+            <img src="imagenes/Galeria/portadatlou.jpg" class="preview" alt="">
+            <video class="video-hover" muted loop playsinline>
+                <source src="videosgaleria/cliptlou.mp4" type="video/mp4">
+            </video>
+        </div>
 
-    <div class="card">
-        <img src="imagenes/Galeria/portadatlou.jpg" class="preview">
-        <video class="video-hover" muted loop playsinline autoplay>
-            <source src="videosgaleria/cliptlou.mp4" type="video/mp4">
-        </video>
+        <div class="card">
+            <img src="imagenes/Galeria/portadaspiderman.jpg" class="preview" alt="">
+            <video class="video-hover" muted loop playsinline>
+                <source src="videosgaleria/clipspiderman.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/Galeria/portadaresidentevil6.jpg" class="preview" alt="">
+            <video class="video-hover" muted loop playsinline>
+                <source src="videosgaleria/clipresidentevil6.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/Galeria/portadauncharted.jpg" class="preview" alt="">
+            <video class="video-hover" muted loop playsinline>
+                <source src="videosgaleria/clipuncharted.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/Galeria/portadafornite.jpg" class="preview" alt="">
+            <video class="video-hover" muted loop playsinline>
+                <source src="videosgaleria/clipfornite.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/Galeria/portadagow.jpg" class="preview" alt="">
+            <video class="video-hover" muted loop playsinline>
+                <source src="videosgaleria/clipgow.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
-
-    <div class="card">
-        <img src="imagenes/Galeria/portadaspiderman.jpg" class="preview">
-        <video class="video-hover" muted loop playsinline autoplay>
-            <source src="videosgaleria/clipspiderman.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="card">
-        <img src="imagenes/Galeria/portadaresidentevil6.jpg" class="preview">
-        <video class="video-hover" muted loop playsinline autoplay>
-            <source src="videosgaleria/clipresidentevil6.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="card">
-        <img src="imagenes/Galeria/portadauncharted.jpg" class="preview">
-        <video class="video-hover" muted loop playsinline autoplay>
-            <source src="videosgaleria/clipuncharted.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="card">
-        <img src="imagenes/Galeria/portadafornite.jpg" class="preview">
-        <video class="video-hover" muted loop playsinline autoplay>
-            <source src="videosgaleria/clipfornite.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="card">
-        <img src="imagenes/Galeria/portadagow.jpg" class="preview">
-        <video class="video-hover" muted loop playsinline autoplay>
-            <source src="videosgaleria/clipgow.mp4" type="video/mp4">
-        </video>
-    </div>
-
-</div>
 
     <section class="seccion-destacada">
         <h2><span role="img" aria-label="fuego">🔥</span> Novedades Exclusivas</h2>
@@ -153,7 +150,7 @@
         <h2><span role="img" aria-label="estrella">⭐</span> El Más Vendido del Mes</h2>
         <div class="producto-grid grid-1">
             <article class="producto-card top-ventas">
-                <img src="imagenes/Inicio/tlou.jpg" alt="Elden Ring">
+                <img src="imagenes/Inicio/tlou.jpg" alt="The Last of Us">
                 <div class="card-content">
                     <p class="plataforma">TOP GLOBAL</p>
                     <h3>The last of us</h3>
@@ -163,86 +160,23 @@
             </article>
         </div>
     </section>
+
 </main>
 
 <footer>
-    <p>&copy; 2025 Imperiogamer</p> 
-    <div class="links-adicionales"> 
+    <p>&copy; 2025 Imperiogamer</p>
+    <div class="links-adicionales">
         <a href="tienda.html#comparativa">Ver Tabla de Consolas</a> |
-        <a href="#">Términos y Condiciones</a> | 
-        <a href="contacto.html#devolución / reembolso">Solicitud De Devolución</a> 
+        <a href="#">Términos y Condiciones</a> |
+        <a href="contacto.html#devolución / reembolso">Solicitud De Devolución</a>
     </div>
 </footer>
 
-<script>
-window.handleLogout = () => {
-    localStorage.removeItem('isLoggedIn');
-    window.location.reload();
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-            menuToggle.setAttribute('aria-expanded', !isExpanded);
-        });
-    }
-
-    const loginScreen = document.getElementById('loginScreen');
-    const loginForm = document.getElementById('loginForm');
-    const logoutItem = document.getElementById('logout-item');
-    const logoutButton = document.getElementById('logout-button');
-    const isUserLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-
-    if (loginScreen) {
-        if (isUserLoggedIn) loginScreen.classList.add('hidden');
-        else loginScreen.classList.remove('hidden');
-    }
-
-    if (logoutItem) {
-        if (isUserLoggedIn) logoutItem.style.display = 'block';
-        else logoutItem.style.display = 'none';
-    }
-
-    if (logoutButton) {
-        logoutButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.handleLogout();
-        });
-    }
-
-    if (loginForm) {
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            localStorage.setItem('isLoggedIn', 'true');
-            if (loginScreen) loginScreen.classList.add('hidden');
-            if (logoutItem) logoutItem.style.display = 'block';
-        });
-    }
-});
-
-document.querySelectorAll('.galeria-item img').forEach(img => {
-    const original = img.src;
-    const hover = img.getAttribute('data-hover');
-
-    img.addEventListener('mouseenter', () => {
-        img.src = hover;
-    });
-
-    img.addEventListener('mouseleave', () => {
-        img.src = original;
-    });
-});
-
-</script>
-
-<div class="login-overlay" id="loginScreen">
+<div class="login-overlay" id="loginScreen" aria-hidden="true">
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
+        <p class="demo-info">Usuario: <b>123</b> / Contraseña: <b>123</b> (demo)</p>
+
         <form id="loginForm">
             <div class="input-group">
                 <label for="username">Usuario</label>
@@ -252,30 +186,170 @@ document.querySelectorAll('.galeria-item img').forEach(img => {
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
             </div>
+
             <button type="submit" class="btn-login">Entrar</button>
             <p class="error-message" id="loginError"></p>
         </form>
+
         <p class="signup-prompt">¿No tienes cuenta? <a href="#" id="signupLink">Regístrate</a></p>
     </div>
 </div>
- 
-    <script>
-document.querySelectorAll('.card').forEach(card => {
-    const video = card.querySelector('.video-hover');
 
-    card.addEventListener('mouseenter', () => {
-        video.currentTime = 0; 
-        video.play();
+<div class="signup-overlay hidden" id="signupScreen" aria-hidden="true">
+    <div class="signup-container">
+        <h2>Crear Cuenta</h2>
+        <p class="demo-info">Puedes usar 123 / 123 como ejemplo (opcional)</p>
+
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="newUser">Usuario</label>
+                <input type="text" id="newUser" placeholder="Elige un usuario" required>
+            </div>
+
+            <div class="input-group">
+                <label for="newPass">Contraseña</label>
+                <input type="password" id="newPass" placeholder="Crea una contraseña" required>
+            </div>
+
+            <button type="submit" class="btn-signup">Crear Cuenta</button>
+        </form>
+
+        <p class="signup-prompt">¿Ya tienes cuenta? <a href="#" id="backToLogin">Iniciar Sesión</a></p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+            });
+        }
+
+        const loginScreen = document.getElementById('loginScreen');
+        const signupScreen = document.getElementById('signupScreen');
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+        const signupLink = document.getElementById('signupLink');
+        const backToLogin = document.getElementById('backToLogin');
+        const logoutItem = document.getElementById('logout-item');
+        const logoutButton = document.getElementById('logout-button');
+        const loginError = document.getElementById('loginError');
+        const isUserLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        if (isUserLoggedIn) {
+            if (loginScreen) loginScreen.classList.add('hidden');
+            if (logoutItem) logoutItem.style.display = 'block';
+        } else {
+            if (loginScreen) loginScreen.classList.remove('hidden');
+            if (logoutItem) logoutItem.style.display = 'none';
+        }
+
+        signupLink && signupLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginScreen.classList.add('hidden');
+            signupScreen.classList.remove('hidden');
+            signupScreen.setAttribute('aria-hidden','false');
+            loginScreen.setAttribute('aria-hidden','true');
+        });
+
+        backToLogin && backToLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            signupScreen.classList.add('hidden');
+            loginScreen.classList.remove('hidden');
+            signupScreen.setAttribute('aria-hidden','true');
+            loginScreen.setAttribute('aria-hidden','false');
+        });
+
+        signupForm && signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('newUser').value.trim();
+            const password = document.getElementById('newPass').value;
+            if (!username || !password) {
+                alert('Completa usuario y contraseña.');
+                return;
+            }
+            const userObj = { user: username, pass: password };
+            localStorage.setItem('imperio_user', JSON.stringify(userObj));
+            localStorage.setItem('isLoggedIn', 'true');
+            signupScreen.classList.add('hidden');
+            loginScreen.classList.add('hidden');
+            if (logoutItem) logoutItem.style.display = 'block';
+        });
+
+        loginForm && loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const u = document.getElementById('username').value.trim();
+            const p = document.getElementById('password').value;
+
+            const saved = localStorage.getItem('imperio_user');
+            if (saved) {
+                try {
+                    const obj = JSON.parse(saved);
+                    if (obj.user === u && obj.pass === p) {
+                        localStorage.setItem('isLoggedIn', 'true');
+                        loginScreen.classList.add('hidden');
+                        if (logoutItem) logoutItem.style.display = 'block';
+                        loginError.textContent = '';
+                        return;
+                    } else {
+                        loginError.textContent = 'Usuario o contraseña incorrectos';
+                        return;
+                    }
+                } catch (err) {
+                }
+            }
+
+            localStorage.setItem('isLoggedIn', 'true');
+            loginScreen.classList.add('hidden');
+            if (logoutItem) logoutItem.style.display = 'block';
+            loginError.textContent = '';
+        });
+
+        logoutButton && logoutButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            if (logoutItem) logoutItem.style.display = 'none';
+            loginScreen.classList.remove('hidden');
+            loginScreen.setAttribute('aria-hidden','false');
+        });
     });
 
-    card.addEventListener('mouseleave', () => {
-        video.pause();
-    });
-});
+    (function videoHoverSetup(){
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            const video = card.querySelector('.video-hover');
+            card.addEventListener('mouseenter', () => {
+                if (video) {
+                    video.currentTime = 0;
+                    video.play().catch(()=>{});
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                if (video) video.pause();
+            });
+
+            card.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                if (video) {
+                    video.currentTime = 0;
+                    video.play().catch(()=>{});
+                }
+            }, {passive: false});
+            card.addEventListener('touchend', () => {
+                if (video) video.pause();
+            });
+            card.addEventListener('touchcancel', () => {
+                if (video) video.pause();
+            });
+        });
+    })();
 </script>
 
 </body>
-
 </html>
 
 
