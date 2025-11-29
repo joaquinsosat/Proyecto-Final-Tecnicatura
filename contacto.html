@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperio Gamer - Inicio</title>
+    <link rel="icon" href="imagenes/inicio/logoimperiokratos.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="imagenes/inicio/logoimperiokratos.jpg" alt="logoimperiokratos" width="150">
+    </div>
+    <nav class="main-nav">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">☰</button>
+        <ul class="nav-menu" id="menu-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="proximamente.html">Próximamente</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="carritodecompras.html">Carrito</a></li>
+            <li id="logout-item" style="display: none;">
+                <a href="#" id="logout-button">Cerrar Sesión 🔓</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <h1 class="section-title-large store-title">💬 ¡Contáctanos!</h1>
+        <p class="hero-subtitle">Estamos aca para responder tus preguntas y comentarios.</p>
+
+       <section class="contenedor-contacto">
+          
+        
+        
+    <div class="seccion-formulario">
+        <h2>Envíanos un Mensaje</h2>
+        <form action="#" method="POST" class="formulario-contacto">
+    <div class="form-grupo">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Joaquin Sosa" required>
+    </div>
+
+    <div class="form-grupo">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="sosa@Gmail.com" required>
+    </div>
+
+    <div class="form-grupo">
+        <label for="asunto">Motivo:</label>
+        <select id="asunto" name="asunto" required>
+            <option value="">Selecciona un Motivo</option>
+            <option value="consulta">Consulta General</option>
+            <option value="soporte">Soporte Técnico</option>
+            <option value="devolucion">Devolución / Reembolso</option>
+            <option value="sugerencia">Sugerencia</option>
+        </select>
+    </div>
+
+    <div class="form-grupo">
+        <label for="mensaje">Tu Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribi aca tu mensaje..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+
+    <div id="mensaje-enviado"></div>
+</form>
+    </div>
+    
+    <div class="seccion-info-mapa">
+        
+        <div class="seccion-info">
+            <h2>📞 Detalles de Contacto</h2>
+            <div class="detalles-contacto">
+                <p>📧 Email:<a href="mailto:soporte@newlevel.com"> Imperiogamer@gmail.com</a></p>
+                <p>☎️ Teléfono:<a href="tel:+541155551234"> +54 11 3372-6011</a></p>
+                <p>🏢 Dirección: Rodríguez Pena 876, San Miguel, Argentina</p>
+                <p>🕒 Horario: Lunes a Viernes, 9:00 - 18:00hs</p>
+            </div>
+        </div>
+
+        <div class="seccion-mapa">
+            <h2>📍 Encuéntranos</h2>
+            <div class="mapa-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.4253699150668!2d-58.70752152337596!3d-34.542783854284316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd0f09b98839%3A0xf6ae94d6e4afc5a9!2sRodr%C3%ADguez%20Pena%20876%2C%20B1663ODQ%20San%20Miguel%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1763877692042!5m2!1ses!2sar" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Imperiogamer</p> 
+    <div class="links-adicionales"> 
+        <a href="tienda.html#comparativa">Ver Tabla de Consolas</a> |
+        <a href="#">Términos y Condiciones</a> | 
+        <a href="contacto.html#devolución / reembolso">Solicitud De Devolución</a> 
+    </div>
+    </footer>
+
+<script>
+window.handleLogout = () => {
+    localStorage.removeItem('isLoggedIn');
+    window.location.href = "index.html";
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+    document.querySelector('.formulario-contacto')?.addEventListener('submit', function(e) { 
+        e.preventDefault();
+
+        const mensajeDiv = document.getElementById('mensaje-enviado');
+        
+        if (mensajeDiv) { 
+            mensajeDiv.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.';
+            mensajeDiv.style.display = 'block';
+            mensajeDiv.style.color = 'green';
+            mensajeDiv.style.marginTop = '10px';
+        }
+
+        this.reset();
+    });
+
+    const logoutItem = document.getElementById('logout-item');
+    const logoutButton = document.getElementById('logout-button');
+    const isUserLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+    if (logoutItem) {
+        logoutItem.style.display = isUserLoggedIn ? 'block' : 'none';
+    }
+
+    if (logoutButton) {
+        logoutButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.handleLogout();
+        });
+    }
+});
+</script>
+    
+</body>
+</html>

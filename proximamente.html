@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperio Gamer - Inicio</title>
+    <link rel="icon" href="imagenes/inicio/logoimperiokratos.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="imagenes/inicio/logoimperiokratos.jpg" alt="logoimperiokratos" width="150">
+    </div>
+    <nav class="main-nav">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">☰</button>
+        <ul class="nav-menu" id="menu-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="proximamente.html">Próximamente</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="carritodecompras.html">Carrito</a></li>
+            <li id="logout-item" style="display: none;">
+                <a href="#" id="logout-button">Cerrar Sesión 🔓</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <main>
+    <h1 class="section-title-large store-title">📅 Próximos Lanzamientos Destacados</h1>
+    <p class="hero-subtitle">Las fechas más importantes del calendario gamer.</p>
+
+    <section class="seccion-destacada">
+        <div class="info-dinamica-card reloj-horizontal">
+            <h2>Hoy es: <span id="fecha-actual">Cargando fecha...</span></h2>
+            <div class="hora-principal" id="hora-actual">Cargando hora...</div>
+            <p class="sub-info">Información actualizada al instante desde tu sistema.</p>
+        </div>
+    </section>
+
+    <section class="proximamente-noticia-compacta">
+        <article class="alerta-card">
+            <div class="alerta-icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone">
+                    <path d="m3 11 1.87-3.25A1 1 0 0 1 6.57 7H17a1 1 0 0 1 .87.5z"/><path d="M19 12a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2z"/><path d="M12 21h.01"/><path d="M7 21h.01"/><path d="M17 21h.01"/><path d="M15.5 3.5 19 7l3 3"/><path d="M8 12h8"/>
+                </svg>
+            </div>
+            <div class="alerta-info">
+                <p class="alerta-fecha">ÚLTIMA HORA | 20 de noviembre de 2025</p>
+                <h3>POLEMICA GTA VI. Tráiler viral falso: su creador admitió haber usado Inteligencia Artificial.</h3>
+            </div>
+            
+            <a href="https://www.infobae.com/tecno/2025/11/27/trailer-viral-de-gta-vi-es-falso-su-creador-admite-que-lo-hizo-con-ia/"
+                class="alerta-boton" target="_blank">
+                Leer Noticia Completa
+            </a>
+        </article>
+    </section>
+
+    <section class="seccion-destacada trailers-seccion">
+        <h2>🎬 Vistazos Exclusivos: Trailers</h2>
+        <div class="trailers-grid">
+            
+           <div class="video-card">
+                <h3 class="video-titulo">Grand Theft Auto VI - Tráiler</h3>
+                <div class="video-container">
+                    <video 
+                        class="video-player"
+                        controls 
+                        preload="metadata" 
+                        poster="imagenes/portadatrailer/portadagtavi.jpg">
+                        <source src="videos/trailergtavi1080p.mp4" type="video/mp4">
+                        <source src="assets/videos/trailer_grandTheftAutovi" type="video/webm">
+                    </video>
+            </div>
+                <p class="video-descripcion">GTA VI es un juego de mundo abierto con dos protagonistas, Lucía y Jason, en una Vice City moderna, marcado por el crimen y la traición..</p>
+            </div>
+
+            <div class="video-card">
+                <h3 class="video-titulo">Starfield: Official Launch - Tráiler</h3>
+                <div class="video-container">
+                    <video 
+                        class="video-player"
+                        controls 
+                        preload="metadata" 
+                        poster="imagenes/portadatrailer/portadastarfield.jpg">
+                        <source src="videos/trailerstarfield.mp4" type="video/mp4">
+                        <source src="assets/videos/trailer_starfield" type="video/webm">
+                    </video>
+                </div>
+                <p class="video-descripcion">La épica aventura espacial de Bethesda. Explora más de 1000 planetas.</p>
+            </div>
+
+        </div>
+    </section>
+    <section class="seccion-destacada">
+        <h2>🎉 Juegos con Fecha Confirmada</h2>
+        <div class="producto-grid grid-4 proximamente-grid">
+            
+            <article class="producto-card fecha-confirmada">
+                <img src="imagenes/proximamente/gtavi.jpg" alt="Grand Theft Auto VI">
+                <div class="card-content">
+                    <h3>Grand Theft Auto VI</h3>
+                    <p class="plataforma">PS5 / Xbox Series X</p>
+                    <p class="fecha-lanzamiento">Fecha: **26 / Mayo / 2026**</p>
+                </div>
+            </article>
+
+            <article class="producto-card fecha-confirmada">
+                <img src="imagenes/proximamente/the-elder-scrolls-vi.jpg" alt="The Elder Scrolls VI">
+                <div class="card-content">
+                    <h3>The Elder Scrolls VI</h3>
+                    <p class="plataforma">Xbox / PC (Exclusivo)</p>
+                    <p class="fecha-lanzamiento">Fecha: **Enero/ 2027**</p>
+                </div>
+            </article>
+
+            <article class="producto-card fecha-confirmada">
+                <img src="imagenes/proximamente/finalfantasyvii.jpg" alt="Final Fantasy VII Rebirth">
+                <div class="card-content">
+                    <h3>FF VII Rebirth</h3>
+                    <p class="plataforma">PS5 Exclusivo</p>
+                    <p class="fecha-lanzamiento">Fecha: **29 / Febrero / 2026**</p>
+                </div>
+            </article>
+
+            <article class="producto-card fecha-confirmada">
+                <img src="imagenes/proximamente/fable.jpg" alt="Fable">
+                <div class="card-content">
+                    <h3>Fable (Reboot)</h3>
+                    <p class="plataforma">Xbox / PC</p>
+                    <p class="fecha-lanzamiento">Fecha: **2026**</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="producto-grid grid-2 proximamente-grid">
+            <article class="producto-card fecha-confirmada">
+                <img src="imagenes/proximamente/mgs.jpg" alt="Metal Gear Solid Delta">
+                <div class="card-content">
+                    <h3>MGS Delta: Snake Eater</h3>
+                    <p class="plataforma">Todas</p>
+                    <p class="fecha-lanzamiento">Fecha: **2025**</p>
+                </div>
+            </article>
+            <article class="producto-card fecha-confirmada">
+                <img src="imagenes/proximamente/perfectdark.jpg" alt="Perfect Dark">
+                <div class="card-content">
+                    <h3>Perfect Dark</h3>
+                    <p class="plataforma">Xbox / PC</p>
+                    <p class="fecha-lanzamiento">Fecha: **Diciembre / 2027**</p>
+                </div>
+            </article>
+        </div>
+    </section>
+        
+<section class="seccion-destacada encuesta-seccion">
+    <h2>Vota: ¿Cuál es el Más Esperado?</h2>
+    <p>Vota por el juego que más esperas de esta lista de próximos lanzamientos:</p>
+    <br>
+    <div class="encuesta-form" id="encuesta-container">
+        <form id="voto-form">
+
+            <div class="voto-opcion">
+                <label>
+                    <input type="radio" name="juego" value="GTA VI" required>
+                    Grand Theft Auto VI
+                </label>
+                <div class="barra-votos" data-votos="1200">1200 votos</div>
+            </div>
+
+            <div class="voto-opcion">
+                <label>
+                    <input type="radio" name="juego" value="Elder Scrolls VI">
+                    The Elder Scrolls VI
+                </label>
+                <div class="barra-votos" data-votos="750">750 votos</div>
+            </div>
+
+            <div class="voto-opcion">
+                <label>
+                    <input type="radio" name="juego" value="Fable (Reboot)">
+                    Fable (Reboot)
+                </label>
+                <div class="barra-votos" data-votos="500">500 votos</div>
+            </div>
+
+            <div class="voto-opcion">
+                <label>
+                    <input type="radio" name="juego" value="MGS Delta">
+                    Metal Gear Solid Delta: Snake Eater
+                </label>
+                <div class="barra-votos" data-votos="950">950 votos</div>
+            </div>
+
+            <button type="submit" class="btn-votar">Votar Ahora</button>
+
+            <p id="voto-mensaje" class="voto-mensaje-oculto"></p>
+
+        </form>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Imperiogamer</p> 
+    <div class="links-adicionales"> 
+        <a href="tienda.html#comparativa">Ver Tabla de Consolas</a> |
+        <a href="#">Términos y Condiciones</a> | 
+        <a href="contacto.html#devolución / reembolso">Solicitud De Devolución</a> 
+    </div>
+    </footer>
+
+<script>
+let votoRegistrado = false;
+
+window.handleLogout = () => {
+    localStorage.removeItem('isLoggedIn');
+    window.location.href = "index.html";
+};
+
+function actualizarFechaHora() {
+    const ahora = new Date();
+    const opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+
+    const fechaElemento = document.getElementById('fecha-actual');
+    const horaElemento = document.getElementById('hora-actual');
+
+    if (fechaElemento) {
+        fechaElemento.textContent = ahora.toLocaleDateString('es-AR', opcionesFecha);
+    }
+    if (horaElemento) {
+        horaElemento.textContent = ahora.toLocaleTimeString('es-AR', opcionesHora);
+    }
+}
+-
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+
+    const logoutItem = document.getElementById('logout-item');
+    const logoutButton = document.getElementById('logout-button');
+    const isUserLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+    if (logoutItem) {
+        logoutItem.style.display = isUserLoggedIn ? 'block' : 'none';
+    }
+
+    if (logoutButton) {
+        logoutButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.handleLogout();
+        });
+    }
+
+    const form = document.getElementById('voto-form');
+    const barrasVotos = document.querySelectorAll('.barra-votos');
+    const mensajeElemento = document.getElementById('voto-mensaje');
+
+    function calcularPorcentajes() {
+        let totalVotos = 0;
+
+        barrasVotos.forEach(barra => {
+            totalVotos += parseInt(barra.getAttribute('data-votos'));
+        });
+
+        barrasVotos.forEach(barra => {
+            const votos = parseInt(barra.getAttribute('data-votos'));
+            const porcentaje = (votos / totalVotos) * 100;
+            barra.style.width = porcentaje.toFixed(1) + '%';
+            barra.textContent = `${votos} votos (${porcentaje.toFixed(1)}%)`;
+        });
+    }
+
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            if (votoRegistrado) {
+                mensajeElemento.textContent = 'Ya has votado. ¡Gracias!';
+                mensajeElemento.classList.remove('voto-mensaje-oculto');
+                mensajeElemento.classList.add('voto-mensaje-error');
+                return;
+            }
+
+            const seleccion = form.querySelector('input[name="juego"]:checked');
+
+            if (seleccion) {
+                const barraAsociada = seleccion.closest('.voto-opcion').querySelector('.barra-votos');
+
+                let votosActuales = parseInt(barraAsociada.getAttribute('data-votos'));
+                votosActuales++;
+                barraAsociada.setAttribute('data-votos', votosActuales);
+
+                calcularPorcentajes();
+                votoRegistrado = true;
+
+                mensajeElemento.textContent = `¡Gracias por votar por ${seleccion.value}!`;
+                mensajeElemento.classList.remove('voto-mensaje-oculto', 'voto-mensaje-error');
+                mensajeElemento.classList.add('voto-mensaje-exito');
+
+                form.querySelectorAll('input').forEach(input => input.disabled = true);
+                form.querySelector('.btn-votar').disabled = true;
+                form.querySelector('.btn-votar').textContent = 'Voto Enviado';
+
+            } else {
+                mensajeElemento.textContent = "Seleccioná un juego para votar.";
+                mensajeElemento.classList.remove('voto-mensaje-oculto', 'voto-mensaje-exito');
+                mensajeElemento.classList.add('voto-mensaje-error');
+            }
+        });
+
+        calcularPorcentajes();
+    }
+});
+
+if (document.getElementById('hora-actual')) {
+    actualizarFechaHora();
+    setInterval(actualizarFechaHora, 1000);
+}
+</script>
+</body>
+</html>

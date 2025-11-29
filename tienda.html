@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperio Gamer - Inicio</title>
+    <link rel="icon" href="imagenes/inicio/logoimperiokratos.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="imagenes/inicio/logoimperiokratos.jpg" alt="logoimperiokratos" width="150">
+    </div>
+    <nav class="main-nav">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">☰</button>
+        <ul class="nav-menu" id="menu-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="proximamente.html">Próximamente</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="carritodecompras.html">Carrito</a></li>
+            <li id="logout-item" style="display: none;">
+                <a href="#" id="logout-button">Cerrar Sesión 🔓</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <h1 class="section-title-large store-title">🛒 Catálogo Completo de Juegos</h1>
+        <p class="hero-subtitle">Encuentra los mejores títulos para tu plataforma favorita.</p>
+
+        <section class="seccion-destacada">
+            <h2>🔎 Buscar y Filtrar</h2>
+            <div class="filtros-tienda">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" onkeyup="simularBusqueda()" placeholder="Buscar por nombre de juego...">
+                    <button onclick="simularBusqueda()">Buscar</button>
+                </div>
+                <div class="platform-selector">
+                    <label for="platformSelect">Plataforma:</label>
+                    <select id="platformSelect" onchange="simularFiltro(this.value)">
+                        <option value="todos">Todos</option>
+                        <option value="ps4">PlayStation 4</option>
+                        <option value="ps5">PlayStation 5</option>
+                        <option value="xbox">Xbox-XS</option>
+                        <option value="pc">PC</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="productos-catalogo">
+    <h2>🎮 Juegos Disponibles</h2>
+
+    <div class="producto-grid grid-4 catalogo-pagina active" id="pagina-1">
+        
+        <article class="producto-card" id="card-intercambiable">
+    <img src="imagenes/tienda/thewitcher.jpg" alt="The Witcher 3: Wild Hunt" id="img-witcher">
+    <div class="card-content">
+        <h3>The Witcher 3: Wild Hunt</h3>
+        <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+        <div class="precio-container">
+            <p class="precio">$17.000 ARS</p> 
+            <button class="btn-agregar-carrito" data-id="TW3-01" data-nombre="The Witcher 3" data-precio="17000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="thewitcher.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+<article class="producto-card">
+    <img src="imagenes/tienda/rdr.jpg" alt="Red Dead Redemption 2">
+    <div class="card-content">
+        <h3>Red Dead Redemption 2</h3>
+        <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
+        <div class="precio-container">
+            <p class="precio">$14.000 ARS</p>
+            <button class="btn-agregar-carrito" data-id="RDR2-02" data-nombre="Red Dead Redemption 2" data-precio="14000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="rdr.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+<article class="producto-card">
+    <img src="imagenes/tienda/gow.jpg" alt="God of War Ragnarök">
+    <div class="card-content">
+        <h3>God of War Ragnarök</h3>
+        <p class="plataforma" data-plataforma="ps4 ps5">PS5 / PS4</p>
+        <div class="precio-container">
+            <p class="precio">$22.000 ARS</p>
+            <button class="btn-agregar-carrito" data-id="GOWR-03" data-nombre="God of War Ragnarök" data-precio="22000" data-plataforma="PS5 / PS4" data-imagen="gow.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+<article class="producto-card">
+    <img src="imagenes/tienda/horizon.jpg" alt="Horizon Zero Dawn">
+    <div class="card-content">
+        <h3>Horizon Zero Dawn</h3>
+        <p class="plataforma" data-plataforma="pc ps4 ps5">PC / PS5 / PS4</p>
+        <div class="precio-container">
+            <p class="precio">$6.000 ARS</p>
+            <button class="btn-agregar-carrito" data-id="HZD-04" data-nombre="Horizon Zero Dawn" data-precio="6000" data-plataforma="PC / PS5 / PS4" data-imagen="horizon.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+<article class="producto-card">
+    <img src="imagenes/tienda/sekiro.jpg" alt="Sekiro: Shadows Die Twice">
+    <div class="card-content">
+        <h3>Sekiro: Shadows Die Twice</h3>
+        <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
+        <div class="precio-container">
+            <p class="precio">$12.000 ARS</p>
+            <button class="btn-agregar-carrito" data-id="SEKI-05" data-nombre="Sekiro: Shadows Die Twice" data-precio="12000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="sekiro.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+<article class="producto-card">
+    <img src="imagenes/tienda/doom.jpg" alt="Doom Eternal">
+    <div class="card-content">
+        <h3>Doom Eternal</h3>
+        <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+        <div class="precio-container">
+            <p class="precio">$9.000 ARS</p>
+            <button class="btn-agregar-carrito" data-id="DOOM-06" data-nombre="Doom Eternal" data-precio="9000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="doom.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+<article class="producto-card">
+    <img src="imagenes/tienda/hitman3.jpg" alt="Hitman 3">
+    <div class="card-content">
+        <h3>Hitman 3</h3>
+        <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+        <div class="precio-container">
+            <p class="precio">$14.000 ARS</p>
+            <button class="btn-agregar-carrito" data-id="H3-07" data-nombre="Hitman 3" data-precio="14000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="hitman3.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+<article class="producto-card">
+    <img src="imagenes/tienda/death-stranding.jpg" alt="Death Stranding">
+    <div class="card-content">
+        <h3>Death Stranding</h3>
+        <p class="plataforma" data-plataforma="pc ps4 ps5">PC / PS5 / PS4</p>
+        <div class="precio-container">
+            <p class="precio">$7.000 ARS</p>
+            <button class="btn-agregar-carrito" data-id="DS-08" data-nombre="Death Stranding" data-precio="7000" data-plataforma="PC / PS5 / PS4" data-imagen="death-stranding.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+<article class="producto-card">
+    <img src="imagenes/tienda/gtav.jpg" alt="Grand Theft Auto V">
+    <div class="card-content">
+        <h3>Grand Theft Auto V</h3>
+        <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+        <div class="precio-container">
+            <p class="precio">$9.000 ARS</p>
+            <button class="btn-agregar-carrito" data-id="GTA5-09" data-nombre="Grand Theft Auto V" data-precio="9000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="gtav.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+<article class="producto-card">
+    <img src="imagenes/tienda/minecraft.jpg" alt="Minecraft">
+    <div class="card-content">
+        <h3>Minecraft</h3>
+        <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
+        <div class="precio-container">
+            <p class="precio">$4.000 ARS</p>
+            <button class="btn-agregar-carrito" data-id="MC-10" data-nombre="Minecraft" data-precio="4000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="minecraft.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+<article class="producto-card">
+    <img src="imagenes/tienda/spiderman.jpg" alt="Marvel's Spider-Man 2">
+    <div class="card-content">
+        <h3>Marvel's Spider-Man 2</h3>
+        <p class="plataforma" data-plataforma="ps5">PS5 Exclusivo</p>
+        <div class="precio-container">
+            <p class="precio">$19.000 ARS</p>
+            <button class="btn-agregar-carrito" data-id="SM2-11" data-nombre="Marvel's Spider-Man 2" data-precio="19000" data-plataforma="PS5 Exclusivo" data-imagen="spiderman.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+<article class="producto-card">
+    <img src="imagenes/tienda/rd2.jpg" alt="Resident Evil 2">
+    <div class="card-content">
+        <h3>Resident Evil 2</h3>
+        <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
+    <div class="precio-container">
+            <p class="precio">$11.000 ARS</p>
+            <button class="btn-agregar-carrito" data-id="RE2-12" data-nombre="Resident Evil 2" data-precio="11000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="rd2.jpg">Añadir</button>
+        </div>
+    </div>
+</article>
+
+</div> 
+<div class="producto-grid grid-4 catalogo-pagina" id="pagina-2">
+    <article class="producto-card">
+        <img src="imagenes/tienda/finalfantasy.jpg" alt="Final Fantasy XVI">
+        <div class="card-content">
+            <h3>Final Fantasy XVI</h3>
+            <p class="plataforma" data-plataforma="ps5">PS5 Exclusivo</p>
+            <div class="precio-container">
+                <p class="precio">$8.600 ARS</p>
+                <button class="btn-agregar-carrito" data-id="FF16-13" data-nombre="Final Fantasy XVI" data-precio="8600" data-plataforma="PS5 Exclusivo" data-imagen="finalfantasy.jpg">Añadir</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="producto-card">
+        <img src="imagenes/tienda/halo.jpg" alt="Halo Infinite">
+        <div class="card-content">
+            <h3>Halo Infinite</h3>
+            <p class="plataforma" data-plataforma="pc xbox">PC / Xbox-XS</p>
+            <div class="precio-container">
+                <p class="precio">$8.000 ARS</p>
+                <button class="btn-agregar-carrito" data-id="HI-14" data-nombre="Halo Infinite" data-precio="8000" data-plataforma="PC / Xbox-XS" data-imagen="halo.jpg">Añadir</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="producto-card">
+        <img src="imagenes/tienda/hades.jpg" alt="hades">
+        <div class="card-content">
+            <h3>Hades</h3>
+            <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / PS4 / Xbox-XS</p>
+            <div class="precio-container">
+                <p class="precio">$14.000 ARS</p>
+                <button class="btn-agregar-carrito" data-id="HADES-15" data-nombre="Hades" data-precio="14000" data-plataforma="PC / PS5 / PS4 / Xbox-XS" data-imagen="hades.jpg">Añadir</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="producto-card">
+        <img src="imagenes/tienda/forza.jpg" alt="Forza Horizon 5">
+        <div class="card-content">
+            <h3>Forza Horizon 5</h3>
+            <p class="plataforma" data-plataforma="pc xbox">PC / Xbox-XS</p>
+            <div class="precio-container">
+                <p class="precio">$6.000 ARS</p>
+                <button class="btn-agregar-carrito" data-id="FH5-16" data-nombre="Forza Horizon 5" data-precio="6000" data-plataforma="PC / Xbox-XS" data-imagen="forza.jpg">Añadir</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="producto-card">
+        <img src="imagenes/tienda/diablo.jpg" alt="Diablo IV">
+        <div class="card-content">
+            <h3>Diablo IV</h3>
+            <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+            <div class="precio-container">
+                <p class="precio">$9.000 ARS</p>
+                <button class="btn-agregar-carrito" data-id="D4-17" data-nombre="Diablo IV" data-precio="9000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="diablo.jpg">Añadir</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="producto-card">
+        <img src="imagenes/tienda/harry.jpg" alt="Hogwarts Legacy">
+        <div class="card-content">
+            <h3>Hogwarts Legacy</h3>
+            <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+            <div class="precio-container">
+                <p class="precio">$12.000 ARS</p>
+                <button class="btn-agregar-carrito" data-id="HL-18" data-nombre="Hogwarts Legacy" data-precio="12000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="harry.jpg">Añadir</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="producto-card">
+        <img src="imagenes/tienda/starwarsjedo.jpg" alt="Star Wars Jedi: Survivor">
+        <div class="card-content">
+            <h3>Star Wars Jedi: Survivor</h3>
+            <p class="plataforma" data-plataforma="pc ps5 xbox">PC / PS5 / Xbox-XS</p>
+            <div class="precio-container">
+                <p class="precio">$4.000 ARS</p>
+                <button class="btn-agregar-carrito" data-id="SWJS-19" data-nombre="Star Wars Jedi: Survivor" data-precio="4000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="starwarsjedo.jpg">Añadir</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="producto-card">
+        <img src="imagenes/tienda/baldur.jpg" alt="Baldur's Gate 3">
+        <div class="card-content">
+            <h3>Baldur's Gate 3</h3>
+            <p class="plataforma" data-plataforma="pc ps5">PC / PS5</p>
+            <div class="precio-container">
+                <p class="precio">$11.000 ARS</p>
+                <button class="btn-agregar-carrito" data-id="BG3-20" data-nombre="Baldur's Gate 3" data-precio="11000" data-plataforma="PC / PS5" data-imagen="baldur.jpg">Añadir</button>
+            </div>
+        </div>
+    </article>
+</div> 
+<div class="paginacion">
+    <a href="#" class="active" onclick="mostrarPagina(1, event)">1</a>
+    <a href="#" onclick="mostrarPagina(2, event)">2</a>
+    <a href="#" onclick="alert('Esta página aún no está disponible.'); event.preventDefault();">3</a>
+    <a href="#" onclick="alert('Funcionalidad avanzada. ¡Fin del catálogo!'); event.preventDefault();">Siguiente »</a>
+</div>
+
+</section>
+        
+        <section class="tabla-comparativa" id="comparativa">
+            <h2>📊 Tabla Comparativa de Consolas</h2>
+            <table class="comparativa-juegos">
+                <thead>
+                    <tr>
+                        <th>Consola</th>
+                        <th>Rendimiento Pico</th>
+                        <th>Almacenamiento Base</th>
+                        <th>GPU</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PlayStation 5</td>
+                        <td>Alto</td>
+                        <td>1 TB SSD</td>
+                        <td>RDNA 2 con 36 CUs</td>
+                    </tr>
+                    <tr>
+                        <td>Xbox Series X</td>
+                        <td>Medio - Alto</td>
+                        <td>825 GB SSD</td>
+                        <td>RDNA 2 con 52 CUs</td>
+                    </tr>
+                    <tr>
+                        <td>PC</td>
+                        <td>Alto</td>
+                        <td>-</td>
+                        <td>AMD Radeon RX 6700 XT</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Imperiogamer</p> 
+    <div class="links-adicionales"> 
+        <a href="tienda.html#comparativa">Ver Tabla de Consolas</a> |
+        <a href="#">Términos y Condiciones</a> | 
+        <a href="contacto.html#devolución/reembolso">Solicitud De Devolución</a> 
+    </div>
+    </footer>
+
+<script>
+    window.handleLogout = () => {
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = "index.html"; 
+    };
+
+    let cart = JSON.parse(localStorage.getItem('imperioGamerCart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('imperioGamerCart', JSON.stringify(cart));
+    }
+
+    window.addToCart = (id, name, price, platform, imageFileName) => {
+        const existingItem = cart.find(item => item.id === id);
+
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({
+                id: id,
+                name: name,
+                price: parseFloat(price), 
+                platform: platform,
+                quantity: 1,
+                imageFileName: imageFileName 
+            });
+        }
+        
+        function mostrarNotificacionCarrito(nombreProducto) {
+            const notificacion = document.getElementById('notificacion-carrito');
+            const mensaje = document.getElementById('mensaje-carrito');
+            
+            if (mensaje && notificacion) {
+                mensaje.textContent = `¡"${nombreProducto}" añadido al carrito!`;
+                notificacion.classList.add('mostrar');
+
+                setTimeout(() => {
+                    notificacion.classList.remove('mostrar');
+                }, 3000); 
+            }
+        }
+
+        saveCart();
+        mostrarNotificacionCarrito(name);
+    };
+
+    const imgElement = document.getElementById('img-witcher');
+    if (imgElement) {
+        window.cambiarImagen = function(nuevaUrl) {
+            imgElement.src = nuevaUrl;
+            imgElement.style.transition = 'transform 0.3s';
+            imgElement.style.transform = 'scale(1.05)';
+        }
+
+        window.restaurarImagen = function(urlOriginal) {
+            imgElement.src = urlOriginal;
+            imgElement.style.transform = 'scale(1)';
+        }
+    }
+    
+    window.mostrarPagina = function(numPagina, event) {
+        event.preventDefault();
+        
+        const paginas = document.querySelectorAll('.catalogo-pagina');
+        const links = document.querySelectorAll('.paginacion a');
+
+        paginas.forEach(p => p.classList.remove('active'));
+        links.forEach(l => l.classList.remove('active'));
+
+        const paginaActiva = document.getElementById(`pagina-${numPagina}`);
+        if (paginaActiva) {
+            paginaActiva.classList.add('active');
+            
+            const linkActivo = document.querySelector(`.paginacion a:nth-child(${numPagina})`);
+            if (linkActivo) {
+                linkActivo.classList.add('active');
+            }
+        }
+        const filtroActual = document.getElementById('platformSelect').value;
+        const queryActual = document.getElementById('searchInput').value;
+        if (queryActual) {
+            simularBusqueda(queryActual);
+        } else {
+            simularFiltro(filtroActual);
+        }
+    }
+
+    window.simularBusqueda = function() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const cardsVisibles = document.querySelectorAll('.catalogo-pagina.active .producto-card');
+        const plataformaActual = document.getElementById('platformSelect').value;
+
+        cardsVisibles.forEach(card => {
+            const nombreJuego = card.querySelector('h3').textContent.toLowerCase();
+            const dataPlataforma = card.querySelector('.plataforma').getAttribute('data-plataforma');
+            
+            const coincideTexto = nombreJuego.includes(query);
+            const coincidePlataforma = (plataformaActual === 'todos' || dataPlataforma.includes(plataformaActual));
+
+            if (coincideTexto && coincidePlataforma) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    window.simularFiltro = function(plataforma) {
+        const cardsVisibles = document.querySelectorAll('.catalogo-pagina.active .producto-card');
+        const query = document.getElementById('searchInput').value.toLowerCase();
+
+        cardsVisibles.forEach(card => {
+            const nombreJuego = card.querySelector('h3').textContent.toLowerCase();
+            const dataPlataforma = card.querySelector('.plataforma').getAttribute('data-plataforma');
+            
+            const coincidePlataforma = (plataforma === 'todos' || dataPlataforma.includes(plataforma));
+            const coincideTexto = nombreJuego.includes(query);
+
+            if (coincidePlataforma && coincideTexto) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        mostrarPagina(1, { preventDefault: () => {} });
+        document.querySelectorAll('.btn-agregar-carrito').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const btn = e.target;
+                const image = btn.dataset.imagen; 
+                window.addToCart(
+                    btn.dataset.id,
+                    btn.dataset.nombre,
+                    btn.dataset.precio,
+                    btn.dataset.plataforma,
+                    image 
+                );
+            });
+        });
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+            });
+        }
+
+        const logoutItem = document.getElementById('logout-item');
+        const logoutButton = document.getElementById('logout-button');
+        const isUserLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+        if (logoutItem) {
+            logoutItem.style.display = isUserLoggedIn ? 'block' : 'none';
+        }
+
+        if (logoutButton) {
+            logoutButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.handleLogout();
+            });
+        }
+    });
+</script>
+
+    <div id="notificacion-carrito">
+    <p id="mensaje-carrito"></p>
+</div>
+
+</body>
+</html>

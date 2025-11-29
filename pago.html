@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperio Gamer - Inicio</title>
+    <link rel="icon" href="imagenes/inicio/logoimperiokratos.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="imagenes/inicio/logoimperiokratos.jpg" alt="logoimperiokratos" width="150">
+    </div>
+    <nav class="main-nav">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">☰</button>
+        <ul class="nav-menu" id="menu-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="proximamente.html">Próximamente</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="carritodecompras.html">Carrito</a></li>
+            <li id="logout-item" style="display: none;">
+                <a href="#" id="logout-button">Cerrar Sesión 🔓</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="pago-container">
+
+        <div class="pago-form">
+
+            <div class="pago-section">
+                <h2>Dirección de facturación</h2>
+
+                <form id="billing-form">
+                    <div class="facturacion-grid">
+                        <div class="form-group">
+                            <input type="text" id="nombre" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="apellido" placeholder="Apellido" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="pais" required>
+                            <option value="">Selecciona un País</option>
+                            <option value="AR">Argentina</option>
+                            <option value="MX">México</option>
+                            <option value="CL">Chile</option>
+                            <option value="CO">Colombia</option>
+                            <option value="ES">España</option>
+                            <option value="OTRO">Otro...</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <div class="pago-section">
+                <h2>Métodos de pago</h2>
+
+                <div class="metodos-pago-list">
+
+                    <div class="metodo-card selected" data-method="mercadopago">
+                        <img src="https://img.icons8.com/color/48/000000/mercado-pago.png">
+                        <h3>Mercado Pago</h3>
+                    </div>
+
+                    <div class="metodo-card" data-method="tarjeta">
+                        <img src="https://img.icons8.com/color/48/000000/visa.png">
+                        <h3>Tarjeta de Crédito / Débito</h3>
+                    </div>
+
+                    <div class="metodo-card" data-method="paypal">
+                        <img src="https://img.icons8.com/color/48/000000/paypal.png">
+                        <h3>PayPal</h3>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="resumen-pago">
+            <h2>Resumen</h2>
+            <div id="resumen-items-list">
+                <p style="color: #aaa;">Cargando productos...</p>
+            </div>
+
+            <div class="resumen-totales">
+                <span>Total:</span>
+                <span id="pago-total-price">$0.00 ARS</span>
+            </div>
+
+            <button class="btn-finalizar-pago">Finalizar Compra</button>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Imperiogamer</p> 
+    <div class="links-adicionales"> 
+        <a href="tienda.html#comparativa">Ver Tabla de Consolas</a> |
+        <a href="#">Términos y Condiciones</a> | 
+        <a href="Ccntacto.html#devolución / reembolso">Solicitud De Devolución</a> 
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const cart = JSON.parse(localStorage.getItem('imperioGamerCart')) || [];
+    const resumenList = document.getElementById('resumen-items-list');
+    const totalDisplay = document.getElementById('pago-total-price');
+
+    function formatCurrency(amount) {
+        return `$${amount.toLocaleString('es-AR', { 
+            minimumFractionDigits: 0, maximumFractionDigits: 0 
+        })} ARS`;
+    }
+
+    function renderResumen() {
+    resumenList.innerHTML = '';
+    let total = 0;
+
+    if (cart.length === 0) {
+        resumenList.innerHTML = '<p>No hay productos en tu carrito.</p>';
+        return;
+    }
+
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        const itemHTML = `
+            <div class="resumen-item">
+                <h4>${item.name}</h4>
+                
+                <div class="resumen-detalle-precio">
+                    <p>${item.plataforma || item.platform} | Cant: ${item.quantity} x ${formatCurrency(item.price)}</p>
+                    <p class="resumen-precio-item">${formatCurrency(itemTotal)}</p>
+                </div>
+            </div>
+        `;
+        resumenList.innerHTML += itemHTML; 
+    });
+
+    totalDisplay.textContent = formatCurrency(total);
+}
+
+    document.querySelectorAll('.metodo-card').forEach(card => {
+        card.addEventListener('click', () => {
+            document.querySelectorAll('.metodo-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+        });
+    });
+
+    document.querySelector('.btn-finalizar-pago').addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const notificacion = document.getElementById('notificacion-pago');
+    notificacion.classList.add('mostrar');
+
+    setTimeout(() => {
+        notificacion.classList.remove('mostrar');
+    }, 3000); 
+});
+
+renderResumen();
+});
+
+window.handleLogout = () => {
+    localStorage.removeItem('isLoggedIn');
+    window.location.href = "index.html"; 
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+
+    const logoutItem = document.getElementById('logout-item');
+    const logoutButton = document.getElementById('logout-button');
+    const isUserLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+    if (logoutItem) {
+        logoutItem.style.display = isUserLoggedIn ? 'block' : 'none';
+    }
+
+    if (logoutButton) {
+        logoutButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.handleLogout();
+        });
+    }
+});
+</script>
+
+    <div id="notificacion-pago">
+    <p>⚠️ Todavía estamos trabajando en los metodos de pago. :Ↄ </p>
+</div>
+
+</body>
+</html>
