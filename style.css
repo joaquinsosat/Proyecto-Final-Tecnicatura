@@ -2084,7 +2084,9 @@ footer {
     transform: translateY(0);
     box-shadow: 0 0 10px rgba(192, 132, 252, 0.4);
 }
-
-
-
-
+.demo-info {
+    color: red;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
