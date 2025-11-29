@@ -93,11 +93,7 @@ h2 {
     transform: translateY(-3px);
 }
 
-/*
-======================================================
-2. HEADER Y NAVEGACIÓN (Menú Más Grande y Centrado)
-======================================================
-*/
+/* MENU */
 header {
     background-color: var(--color-fondo);
     color: var(--color-texto);
@@ -222,15 +218,9 @@ header {
         display: flex;
     }
 }
-/* ======================================================
-   FIN: HEADER Y NAVEGACIÓN
-   ====================================================== */
 
-/*
-======================================================
-3. SECCIÓN INICIO: PRODUCTOS DESTACADOS (Estilo NEXUS DIGITAL MEJORADO)
-======================================================
-*/
+/* FIN: MENU */
+
 .seccion-destacada {
     margin-bottom: 40px;
 }
@@ -455,13 +445,9 @@ footer {
     color: var(--color-principal);
 }
 
-/* ======================================================
-   FIN: CSS DE INICIO
-   ====================================================== */
+/* FIN: CSS DE INICIO */
 
-/* ======================================================
-   INICIO: CSS DE TIENDA
-   ====================================================== */
+/* INICIO: CSS DE TIENDA */
 
 .productos-catalogo {
     margin-top: 30px;
@@ -619,13 +605,9 @@ footer {
     }
 }
 
-/* ======================================================
-   FIN: CSS DE TIENDA
-   ====================================================== */
+/* FIN: CSS DE TIENDA */
 
-/* ======================================================
-   INICIO: CSS DE PRÓXIMAMENTE
-   ====================================================== */
+/* INICIO: CSS DE PRÓXIMAMENTE */
 
 .info-dinamica-card {
     background-color: var(--color-card-fondo);
@@ -791,9 +773,7 @@ footer {
     font-weight: bold;
 }
 
-/* ========================================================== */
-/* ========= ESTILOS AÑADIDOS PARA SECCIÓN TRAILERS ========= */
-/* ========================================================== */
+/* ESTILOS AÑADIDOS PARA SECCIÓN TRAILERS */
 
 .trailers-seccion {
     background-color: var(--color-card-fondo);
@@ -896,13 +876,9 @@ footer {
     }
 }
 
-/* ======================================================
-   FIN: CSS DE PRÓXIMAMENTE
-   ====================================================== */
+/* FIN: CSS DE PRÓXIMAMENTE */
 
-/* ======================================================
-   INICIO: CSS DE CONTACTO
-   ====================================================== */
+/* INICIO: CSS DE CONTACTO */
 
 .contenedor-contacto {
     display: flex;
@@ -1051,13 +1027,10 @@ footer {
     }
 }
 
-/* ======================================================
-   FIN: CSS DE CONTACTO
-   ====================================================== */
+/* FIN CSS DE CONTACTO */
 
-   /* ======================================================
-   INICIO: CSS DEL CARRITO DE COMPRAS
-   ====================================================== */
+/* INICIO CSS DEL CARRITO DE COMPRAS */
+
 .carrito-container {
     max-width: 1000px;
     margin: 40px auto;
@@ -1326,9 +1299,7 @@ footer {
     font-size: 1.1rem;
 }
 
-/* ======================================================
-   NUEVO CSS: PANTALLA DE LOGIN
-   ====================================================== */
+/* ARREGLE PANTALLA DE LOGIN  */
 
 .login-overlay {
     position: fixed;
@@ -1461,7 +1432,7 @@ footer {
     text-decoration: underline;
 }
 
-/* ========= GALERÍA DE HOVER (ADAPTADA A TU ESTÉTICA) ====== */
+/* ARREGLE LA GALERÍA DE HOVER */
 
 .video-gallery-seccion {
     background-color: var(--color-card-fondo);
@@ -1507,7 +1478,7 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    pointer-events: none;
+    pointer-events: auto;
     opacity: 0;
 }
 
@@ -1680,3 +1651,262 @@ footer {
     }
 }
 
+/* ARREGLE EL CARRITO CELU */
+
+@media (max-width: 768px) {
+    main, body {
+        overflow-x: hidden;
+    }
+
+    .carrito-container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .carrito-item-card {
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 10px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .item-imagen {
+        width: 100px; 
+        height: 100px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .item-info {
+        flex-grow: unset;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .item-cantidad, .item-precio-eliminar {
+        flex-direction: column; 
+        align-items: flex-start;
+        margin-left: 0;
+        width: 100%; 
+        text-align: left;
+    }
+    
+    .item-precio-eliminar {
+        flex-direction: row; 
+        justify-content: space-between; 
+        margin-top: 10px; 
+    }
+
+    .item-precio p {
+        width: auto; 
+        text-align: left;
+        font-size: 1.4rem; 
+    }
+
+    .btn-eliminar {
+        margin-left: 10px;
+        padding: 10px 15px; 
+    }
+
+    .carrito-resumen {
+        margin: 20px 10px;
+    }
+}
+
+/* ARREGLE PAGINA DE PAGOS */
+
+@media (max-width: 768px) {
+    
+    .pago-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+        margin: 20px auto;
+    }
+    
+    .resumen-pago {
+        order: -1;
+        padding: 20px;
+        border: 2px solid var(--color-destacado); 
+    }
+
+    .facturacion-grid {
+        grid-template-columns: 1fr;
+        gap: 0px; 
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 18px 15px;
+        font-size: 1rem;
+    }
+    
+    .pago-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .metodos-pago-list {
+        margin-top: 15px;
+    }
+    
+    .metodo-card {
+        padding: 15px;
+        margin-bottom: 10px;
+        border: 1px solid #333; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    }
+    
+    .metodo-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .resumen-totales {
+        font-size: 1.3rem;
+    }
+
+    .btn-finalizar-pago {
+        padding: 18px;
+        font-size: 1.1rem;
+        margin-top: 15px;
+    }
+}
+
+/* SOSA ARRGELE LA TIENDA*/
+
+@media (min-width: 501px) and (max-width: 768px) {
+    
+    .tienda-page .producto-grid { 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 10px; 
+        padding: 0 5px; 
+    }
+
+    .tienda-page .producto-card h3 {
+        font-size: 0.8rem; 
+        margin: 5px 0 2px 0;
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+    }
+
+    .tienda-page .producto-card .precio {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .tienda-page .producto-grid { 
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px; 
+        padding: 0 10px;
+    }
+
+    .tienda-page .producto-card h3 {
+        font-size: 0.95rem; 
+        margin: 8px 0 4px 0;
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+    }
+
+    .tienda-page .producto-card .precio {
+        font-size: 1rem;
+    }
+    
+    .tienda-page .filtro-busqueda-container { 
+        flex-direction: column; 
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .tienda-page .filtro-busqueda-container input[type="text"],
+    .tienda-page .filtro-busqueda-container select,
+    .tienda-page .filtro-busqueda-container button {
+        width: 100%; 
+        box-sizing: border-box;
+    }
+}
+
+/* JOAQUIN SOSA REDISEÑO ESTÉTICO DEL MENÚ HAMBURGUESA */
+
+@media (max-width: 768px) {
+
+    .nav-menu { 
+        position: fixed; 
+        top: 0;
+        right: 0; 
+        width: 75%;
+        max-width: 350px; 
+        height: 100vh;
+        
+        background-color: #1a1a2e;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.7); 
+        
+        transform: translateX(100%); 
+        transition: transform 0.3s ease-out; 
+        
+        display: block; 
+        padding-top: 60px;
+        
+        z-index: 999; 
+        overflow-y: auto; 
+    }
+
+    .nav-menu.active { 
+        transform: translateX(0); 
+    }
+
+    .nav-menu ul {
+        list-style: none;
+        padding: 20px 0;
+        margin: 0;
+        width: 100%; 
+    }
+    
+    .nav-menu li {
+        margin: 0;
+        padding: 12px 25px; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        transition: background-color 0.2s;
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-menu li:hover {
+        background-color: rgba(255, 255, 255, 0.05); 
+    }
+
+    .nav-menu a {
+        color: #fff;
+        font-size: 1.2rem; 
+        font-weight: 500;
+        text-transform: none; 
+        display: block;
+        padding: 0;
+        text-align: left; 
+    }
+    
+    .nav-menu a:hover,
+    .nav-menu a:focus {
+        color: var(--color-destacado); 
+    }
+
+    .navbar { 
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 15px 20px;
+    }
+    
+    .menu-toggle { 
+        display: block;
+        z-index: 1000; 
+        color: #fff;
+    }
+}
