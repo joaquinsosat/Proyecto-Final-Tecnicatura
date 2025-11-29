@@ -336,18 +336,15 @@
             if (video) video.pause();
         });
 
-        // Móvil - Tocás y se reproduce, soltás y se pausa (sin bloquear el click)
         card.addEventListener('touchstart', () => {
             if (video) {
                 video.currentTime = 0;
                 video.play().catch(()=>{});
             }
         });
-
         card.addEventListener('touchend', () => {
             if (video) video.pause();
         });
-
         card.addEventListener('touchcancel', () => {
             if (video) video.pause();
         });
@@ -357,6 +354,7 @@
 
 </body>
 </html>
+
 
 
 
