@@ -319,38 +319,45 @@
     });
 
     (function videoHoverSetup(){
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            const video = card.querySelector('.video-hover');
-            card.addEventListener('mouseenter', () => {
-                if (video) {
-                    video.currentTime = 0;
-                    video.play().catch(()=>{});
-                }
-            });
-            card.addEventListener('mouseleave', () => {
-                if (video) video.pause();
-            });
+    const cards = document.querySelectorAll('.card');
 
-            card.addEventListener('touchstart', (e) => {
-                e.preventDefault();
-                if (video) {
-                    video.currentTime = 0;
-                    video.play().catch(()=>{});
-                }
-            }, {passive: false});
-            card.addEventListener('touchend', () => {
-                if (video) video.pause();
-            });
-            card.addEventListener('touchcancel', () => {
-                if (video) video.pause();
-            });
+    cards.forEach(card => {
+        const video = card.querySelector('.video-hover');
+
+        // PC - Hover
+        card.addEventListener('mouseenter', () => {
+            if (video) {
+                video.currentTime = 0;
+                video.play().catch(()=>{});
+            }
         });
-    })();
+
+        card.addEventListener('mouseleave', () => {
+            if (video) video.pause();
+        });
+
+        // Móvil - Tocás y se reproduce, soltás y se pausa (sin bloquear el click)
+        card.addEventListener('touchstart', () => {
+            if (video) {
+                video.currentTime = 0;
+                video.play().catch(()=>{});
+            }
+        });
+
+        card.addEventListener('touchend', () => {
+            if (video) video.pause();
+        });
+
+        card.addEventListener('touchcancel', () => {
+            if (video) video.pause();
+        });
+    });
+  })();
 </script>
 
 </body>
 </html>
+
 
 
 
