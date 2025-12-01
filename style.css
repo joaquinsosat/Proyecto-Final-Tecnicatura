@@ -2090,3 +2090,10 @@ footer {
     opacity: 0.8;
     margin-bottom: 10px;
 }
+
+@media (min-width: 501px) {
+    .tienda-page .filtros-tienda {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+}
