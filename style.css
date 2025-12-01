@@ -2091,32 +2091,6 @@ footer {
     margin-bottom: 10px;
 }
 
-@media (min-width: 501px) {
-    .tienda-page .filtros-tienda {
-        flex-direction: row !important;
-        align-items: center !important;
-    }
-}
-
-/* 🔧 Fix específico para GitHub Pages: evitar que el selector baje */
-.tienda-page .filtros-tienda {
-    display: flex;
-    flex-wrap: nowrap !important;
-    gap: 10px;
-}
-
-/* Evita que el select se aplaste y baje */
-#platformSelect {
-    min-width: 150px;
-    flex-shrink: 0 !important;
-}
-
-/* Evita que el input ocupe más del ancho */
-#searchInput {
-    flex-grow: 1;
-    min-width: 0;
-}
-
 /* --- FIX: que la barra de búsqueda y selector queden siempre en la misma línea --- */
 .filtros-tienda {
     display: flex !important;
@@ -2133,3 +2107,4 @@ footer {
 .filtros-tienda .platform-selector {
     flex-shrink: 0;
 }
+
