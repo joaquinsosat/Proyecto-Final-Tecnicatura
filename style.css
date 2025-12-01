@@ -2100,9 +2100,11 @@ footer {
 }
 
 .filtros-tienda .search-bar {
-    max-width: 600px;
+    flex-grow: 1;
+    min-width: 0;
 }
 
 .filtros-tienda .platform-selector {
     flex-shrink: 0;
 }
+
