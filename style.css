@@ -2116,3 +2116,20 @@ footer {
     flex-grow: 1;
     min-width: 0;
 }
+
+/* --- FIX: que la barra de búsqueda y selector queden siempre en la misma línea --- */
+.filtros-tienda {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 10px;
+}
+
+.filtros-tienda .search-bar {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.filtros-tienda .platform-selector {
+    flex-shrink: 0;
+}
