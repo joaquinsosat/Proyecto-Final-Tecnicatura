@@ -2108,3 +2108,6 @@ footer {
     flex-shrink: 0;
 }
 
+.filtros-tienda .search-bar {
+    max-width: 600px;   /* AJUSTABLE — este valor queda perfecto en GitHub */
+}
