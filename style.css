@@ -2100,14 +2100,9 @@ footer {
 }
 
 .filtros-tienda .search-bar {
-    flex-grow: 1;
-    min-width: 0;
+    max-width: 600px;
 }
 
 .filtros-tienda .platform-selector {
     flex-shrink: 0;
-}
-
-.filtros-tienda .search-bar {
-    max-width: 600px;   /* AJUSTABLE — este valor queda perfecto en GitHub */
 }
