@@ -2108,3 +2108,79 @@ footer {
     flex-shrink: 0;
 }
 
+@media (max-width: 768px) {
+    
+    .filtros-tienda {
+        flex-direction: column; 
+        gap: 15px;
+        align-items: stretch;
+        padding: 0 5px;
+    }
+
+    .search-bar {
+        flex-direction: column; 
+        gap: 5px;
+        max-width: none; 
+    }
+
+    .search-bar input,
+    .search-bar button,
+    .platform-selector select {
+        width: 100%;
+        margin: 0;
+        min-height: 38px;
+    }
+
+    .search-bar input,
+    .search-bar button {
+        border-radius: 6px; 
+        border: 1px solid var(--color-principal);
+    }
+
+.seccion-destacada {
+    text-align: left; 
+    margin-bottom: 30px; 
+    width: 100%;
+}
+
+.seccion-destacada h2 {
+    text-align: left;
+    margin-bottom: 15px; 
+}
+}
+
+.selector-cuenta {
+    margin: 10px 0 10px 0;
+    text-align: left;
+    font-size: 0.9em;
+    color: var(--color-texto);
+}
+
+.selector-cuenta label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.tipo-cuenta-select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--color-borde-card);
+    border-radius: 4px;
+    background-color: var(--color-card-fondo); 
+    color: var(--color-texto);
+    cursor: pointer;
+    transition: border-color 0.2s;
+    box-sizing: border-box; 
+    font-family: var(--fuente-principal);
+}
+
+.tipo-cuenta-select:hover {
+    border-color: var(--color-principal);
+}
+
+.producto-card .precio .precio-actual {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--color-destacado); 
+}
