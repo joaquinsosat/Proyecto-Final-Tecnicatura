@@ -28,7 +28,7 @@
     </nav>
 </header>
 
-    <main class="tienda-page>
+    <main class="tienda-page">
         <h20 class="section-title-large store-title"></h20>
         <h1 class="section-title-large store-title">🛒 Catálogo Completo de Juegos</h1>
         <p class="hero-subtitle">Encuentra los mejores títulos para tu plataforma favorita.</p>
@@ -55,260 +55,400 @@
 
 
         <section class="productos-catalogo">
-    <h2>🎮 Juegos Disponibles</h2>
+        <h2>🎮 Juegos Disponibles</h2>
 
-    <div class="producto-grid grid-4 catalogo-pagina active" id="pagina-1">
-        
-        <article class="producto-card" id="card-intercambiable">
-    <img src="imagenes/Tienda/thewitcher.jpg" alt="The Witcher 3: Wild Hunt" id="img-witcher">
-    <div class="card-content">
-        <h3>The Witcher 3: Wild Hunt</h3>
-        <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
-        <div class="precio-container">
-            <p class="precio">$17.000 ARS</p> 
-            <button class="btn-agregar-carrito" data-id="TW3-01" data-nombre="The Witcher 3" data-precio="17000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="thewitcher.jpg">Añadir</button>
+        <div class="producto-grid grid-4 catalogo-pagina active" id="pagina-1">
+            
+            <article class="producto-card" id="card-intercambiable">
+                <img src="imagenes/Tienda/thewitcher.jpg" alt="The Witcher 3: Wild Hunt" id="img-witcher">
+                <div class="card-content">
+                    <h3>The Witcher 3: Wild Hunt</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-TW3-01">Cuenta:</label>
+                        <select id="cuenta-TW3-01" class="tipo-cuenta-select" data-precio-base="17000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$17.000 ARS</span></p> 
+                        <button class="btn-agregar-carrito" data-id="TW3-01" data-nombre="The Witcher 3" data-precio="17000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="thewitcher.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/rdr.jpg" alt="Red Dead Redemption 2">
+                <div class="card-content">
+                    <h3>Red Dead Redemption 2</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-RDR2-02">Cuenta:</label>
+                        <select id="cuenta-RDR2-02" class="tipo-cuenta-select" data-precio-base="14000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$14.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="RDR2-02" data-nombre="Red Dead Redemption 2" data-precio="14000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="rdr.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/gow.jpg" alt="God of War Ragnarök">
+                <div class="card-content">
+                    <h3>God of War Ragnarök</h3>
+                    <p class="plataforma" data-plataforma="ps4 ps5">PS5 / PS4</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-GOWR-03">Cuenta:</label>
+                        <select id="cuenta-GOWR-03" class="tipo-cuenta-select" data-precio-base="22000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$22.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="GOWR-03" data-nombre="God of War Ragnarök" data-precio="22000" data-plataforma="PS5 / PS4" data-imagen="gow.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/horizon.jpg" alt="Horizon Zero Dawn">
+                <div class="card-content">
+                    <h3>Horizon Zero Dawn</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 ps5">PC / PS5 / PS4</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-HZD-04">Cuenta:</label>
+                        <select id="cuenta-HZD-04" class="tipo-cuenta-select" data-precio-base="6000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$6.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="HZD-04" data-nombre="Horizon Zero Dawn" data-precio="6000" data-plataforma="PC / PS5 / PS4" data-imagen="horizon.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/sekiro.jpg" alt="Sekiro: Shadows Die Twice">
+                <div class="card-content">
+                    <h3>Sekiro: Shadows Die Twice</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-SEKI-05">Cuenta:</label>
+                        <select id="cuenta-SEKI-05" class="tipo-cuenta-select" data-precio-base="12000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$12.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="SEKI-05" data-nombre="Sekiro: Shadows Die Twice" data-precio="12000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="sekiro.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/doom.jpg" alt="Doom Eternal">
+                <div class="card-content">
+                    <h3>Doom Eternal</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-DOOM-06">Cuenta:</label>
+                        <select id="cuenta-DOOM-06" class="tipo-cuenta-select" data-precio-base="9000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$9.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="DOOM-06" data-nombre="Doom Eternal" data-precio="9000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="doom.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/hitman3.jpg" alt="Hitman 3">
+                <div class="card-content">
+                    <h3>Hitman 3</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-H3-07">Cuenta:</label>
+                        <select id="cuenta-H3-07" class="tipo-cuenta-select" data-precio-base="14000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$14.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="H3-07" data-nombre="Hitman 3" data-precio="14000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="hitman3.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/death-stranding.jpg" alt="Death Stranding">
+                <div class="card-content">
+                    <h3>Death Stranding</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 ps5">PC / PS5 / PS4</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-DS-08">Cuenta:</label>
+                        <select id="cuenta-DS-08" class="tipo-cuenta-select" data-precio-base="7000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$7.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="DS-08" data-nombre="Death Stranding" data-precio="7000" data-plataforma="PC / PS5 / PS4" data-imagen="death-stranding.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/gtav.jpg" alt="Grand Theft Auto V">
+                <div class="card-content">
+                    <h3>Grand Theft Auto V</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-GTA5-09">Cuenta:</label>
+                        <select id="cuenta-GTA5-09" class="tipo-cuenta-select" data-precio-base="9000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$9.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="GTA5-09" data-nombre="Grand Theft Auto V" data-precio="9000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="gtav.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/minecraft.jpg" alt="Minecraft">
+                <div class="card-content">
+                    <h3>Minecraft</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-MC-10">Cuenta:</label>
+                        <select id="cuenta-MC-10" class="tipo-cuenta-select" data-precio-base="4000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$4.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="MC-10" data-nombre="Minecraft" data-precio="4000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="minecraft.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/spiderman.jpg" alt="Marvel's Spider-Man 2">
+                <div class="card-content">
+                    <h3>Marvel's Spider-Man 2</h3>
+                    <p class="plataforma" data-plataforma="ps5">PS5 Exclusivo</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-SM2-11">Cuenta:</label>
+                        <select id="cuenta-SM2-11" class="tipo-cuenta-select" data-precio-base="19000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$19.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="SM2-11" data-nombre="Marvel's Spider-Man 2" data-precio="19000" data-plataforma="PS5 Exclusivo" data-imagen="spiderman.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/rd2.jpg" alt="Resident Evil 2">
+                <div class="card-content">
+                    <h3>Resident Evil 2</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-RE2-12">Cuenta:</label>
+                        <select id="cuenta-RE2-12" class="tipo-cuenta-select" data-precio-base="11000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$11.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="RE2-12" data-nombre="Resident Evil 2" data-precio="11000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="rd2.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+        </div> 
+        <div class="producto-grid grid-4 catalogo-pagina" id="pagina-2">
+            <article class="producto-card">
+                <img src="imagenes/Tienda/finalfantasy.jpg" alt="Final Fantasy XVI">
+                <div class="card-content">
+                    <h3>Final Fantasy XVI</h3>
+                    <p class="plataforma" data-plataforma="ps5">PS5 Exclusivo</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-FF16-13">Cuenta:</label>
+                        <select id="cuenta-FF16-13" class="tipo-cuenta-select" data-precio-base="8600">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$8.600 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="FF16-13" data-nombre="Final Fantasy XVI" data-precio="8600" data-plataforma="PS5 Exclusivo" data-imagen="finalfantasy.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/halo.jpg" alt="Halo Infinite">
+                <div class="card-content">
+                    <h3>Halo Infinite</h3>
+                    <p class="plataforma" data-plataforma="pc xbox">PC / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-HI-14">Cuenta:</label>
+                        <select id="cuenta-HI-14" class="tipo-cuenta-select" data-precio-base="8000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$8.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="HI-14" data-nombre="Halo Infinite" data-precio="8000" data-plataforma="PC / Xbox-XS" data-imagen="halo.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/hades.jpg" alt="hades">
+                <div class="card-content">
+                    <h3>Hades</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / PS4 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-HADES-15">Cuenta:</label>
+                        <select id="cuenta-HADES-15" class="tipo-cuenta-select" data-precio-base="14000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$14.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="HADES-15" data-nombre="Hades" data-precio="14000" data-plataforma="PC / PS5 / PS4 / Xbox-XS" data-imagen="hades.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/forza.jpg" alt="Forza Horizon 5">
+                <div class="card-content">
+                    <h3>Forza Horizon 5</h3>
+                    <p class="plataforma" data-plataforma="pc xbox">PC / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-FH5-16">Cuenta:</label>
+                        <select id="cuenta-FH5-16" class="tipo-cuenta-select" data-precio-base="6000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$6.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="FH5-16" data-nombre="Forza Horizon 5" data-precio="6000" data-plataforma="PC / Xbox-XS" data-imagen="forza.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/diablo.jpg" alt="Diablo IV">
+                <div class="card-content">
+                    <h3>Diablo IV</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-D4-17">Cuenta:</label>
+                        <select id="cuenta-D4-17" class="tipo-cuenta-select" data-precio-base="9000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$9.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="D4-17" data-nombre="Diablo IV" data-precio="9000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="diablo.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/harry.jpg" alt="Hogwarts Legacy">
+                <div class="card-content">
+                    <h3>Hogwarts Legacy</h3>
+                    <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-HL-18">Cuenta:</label>
+                        <select id="cuenta-HL-18" class="tipo-cuenta-select" data-precio-base="12000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$12.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="HL-18" data-nombre="Hogwarts Legacy" data-precio="12000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="harry.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/starwarsjedo.jpg" alt="Star Wars Jedi: Survivor">
+                <div class="card-content">
+                    <h3>Star Wars Jedi: Survivor</h3>
+                    <p class="plataforma" data-plataforma="pc ps5 xbox">PC / PS5 / Xbox-XS</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-SWJS-19">Cuenta:</label>
+                        <select id="cuenta-SWJS-19" class="tipo-cuenta-select" data-precio-base="4000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$4.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="SWJS-19" data-nombre="Star Wars Jedi: Survivor" data-precio="4000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="starwarsjedo.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <img src="imagenes/Tienda/baldur.jpg" alt="Baldur's Gate 3">
+                <div class="card-content">
+                    <h3>Baldur's Gate 3</h3>
+                    <p class="plataforma" data-plataforma="pc ps5">PC / PS5</p>
+                    <div class="cuenta-selector">
+                        <label for="cuenta-BG3-20">Cuenta:</label>
+                        <select id="cuenta-BG3-20" class="tipo-cuenta-select" data-precio-base="11000">
+                            <option value="primaria">Primaria (Precio Base)</option>
+                            <option value="secundaria">Secundaria (-35%)</option>
+                        </select>
+                    </div>
+                    <div class="precio-container">
+                        <p class="precio"><span class="precio-actual">$11.000 ARS</span></p>
+                        <button class="btn-agregar-carrito" data-id="BG3-20" data-nombre="Baldur's Gate 3" data-precio="11000" data-plataforma="PC / PS5" data-imagen="baldur.jpg" data-tipo="primaria">Añadir</button>
+                    </div>
+                </div>
+            </article>
+        </div> 
+        <div class="paginacion">
+            <a href="#" class="active" onclick="mostrarPagina(1, event)">1</a>
+            <a href="#" onclick="mostrarPagina(2, event)">2</a>
+            <a href="#" onclick="alert('Esta página aún no está disponible.'); event.preventDefault();">3</a>
+            <a href="#" onclick="alert('Funcionalidad avanzada. ¡Fin del catálogo!'); event.preventDefault();">Siguiente »</a>
         </div>
-    </div>
-</article>
 
-<article class="producto-card">
-    <img src="imagenes/Tienda/rdr.jpg" alt="Red Dead Redemption 2">
-    <div class="card-content">
-        <h3>Red Dead Redemption 2</h3>
-        <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
-        <div class="precio-container">
-            <p class="precio">$14.000 ARS</p>
-            <button class="btn-agregar-carrito" data-id="RDR2-02" data-nombre="Red Dead Redemption 2" data-precio="14000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="rdr.jpg">Añadir</button>
-        </div>
-    </div>
-</article>
-
-<article class="producto-card">
-    <img src="imagenes/Tienda/gow.jpg" alt="God of War Ragnarök">
-    <div class="card-content">
-        <h3>God of War Ragnarök</h3>
-        <p class="plataforma" data-plataforma="ps4 ps5">PS5 / PS4</p>
-        <div class="precio-container">
-            <p class="precio">$22.000 ARS</p>
-            <button class="btn-agregar-carrito" data-id="GOWR-03" data-nombre="God of War Ragnarök" data-precio="22000" data-plataforma="PS5 / PS4" data-imagen="gow.jpg">Añadir</button>
-        </div>
-    </div>
-</article>
-
-<article class="producto-card">
-    <img src="imagenes/Tienda/horizon.jpg" alt="Horizon Zero Dawn">
-    <div class="card-content">
-        <h3>Horizon Zero Dawn</h3>
-        <p class="plataforma" data-plataforma="pc ps4 ps5">PC / PS5 / PS4</p>
-        <div class="precio-container">
-            <p class="precio">$6.000 ARS</p>
-            <button class="btn-agregar-carrito" data-id="HZD-04" data-nombre="Horizon Zero Dawn" data-precio="6000" data-plataforma="PC / PS5 / PS4" data-imagen="horizon.jpg">Añadir</button>
-        </div>
-    </div>
-</article>
-
-<article class="producto-card">
-    <img src="imagenes/Tienda/sekiro.jpg" alt="Sekiro: Shadows Die Twice">
-    <div class="card-content">
-        <h3>Sekiro: Shadows Die Twice</h3>
-        <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
-        <div class="precio-container">
-            <p class="precio">$12.000 ARS</p>
-            <button class="btn-agregar-carrito" data-id="SEKI-05" data-nombre="Sekiro: Shadows Die Twice" data-precio="12000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="sekiro.jpg">Añadir</button>
-        </div>
-    </div>
-</article>
-
-<article class="producto-card">
-    <img src="imagenes/Tienda/doom.jpg" alt="Doom Eternal">
-    <div class="card-content">
-        <h3>Doom Eternal</h3>
-        <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
-        <div class="precio-container">
-            <p class="precio">$9.000 ARS</p>
-            <button class="btn-agregar-carrito" data-id="DOOM-06" data-nombre="Doom Eternal" data-precio="9000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="doom.jpg">Añadir</button>
-        </div>
-    </div>
-</article>
-
-<article class="producto-card">
-    <img src="imagenes/Tienda/hitman3.jpg" alt="Hitman 3">
-    <div class="card-content">
-        <h3>Hitman 3</h3>
-        <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
-        <div class="precio-container">
-            <p class="precio">$14.000 ARS</p>
-            <button class="btn-agregar-carrito" data-id="H3-07" data-nombre="Hitman 3" data-precio="14000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="hitman3.jpg">Añadir</button>
-        </div>
-    </div>
-</article>
-
-<article class="producto-card">
-    <img src="imagenes/Tienda/death-stranding.jpg" alt="Death Stranding">
-    <div class="card-content">
-        <h3>Death Stranding</h3>
-        <p class="plataforma" data-plataforma="pc ps4 ps5">PC / PS5 / PS4</p>
-        <div class="precio-container">
-            <p class="precio">$7.000 ARS</p>
-            <button class="btn-agregar-carrito" data-id="DS-08" data-nombre="Death Stranding" data-precio="7000" data-plataforma="PC / PS5 / PS4" data-imagen="death-stranding.jpg">Añadir</button>
-        </div>
-    </div>
-</article>
-
-<article class="producto-card">
-    <img src="imagenes/Tienda/gtav.jpg" alt="Grand Theft Auto V">
-    <div class="card-content">
-        <h3>Grand Theft Auto V</h3>
-        <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
-        <div class="precio-container">
-            <p class="precio">$9.000 ARS</p>
-            <button class="btn-agregar-carrito" data-id="GTA5-09" data-nombre="Grand Theft Auto V" data-precio="9000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="gtav.jpg">Añadir</button>
-        </div>
-    </div>
-</article>
-
-<article class="producto-card">
-    <img src="imagenes/Tienda/minecraft.jpg" alt="Minecraft">
-    <div class="card-content">
-        <h3>Minecraft</h3>
-        <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
-        <div class="precio-container">
-            <p class="precio">$4.000 ARS</p>
-            <button class="btn-agregar-carrito" data-id="MC-10" data-nombre="Minecraft" data-precio="4000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="minecraft.jpg">Añadir</button>
-        </div>
-    </div>
-</article>
-
-<article class="producto-card">
-    <img src="imagenes/Tienda/spiderman.jpg" alt="Marvel's Spider-Man 2">
-    <div class="card-content">
-        <h3>Marvel's Spider-Man 2</h3>
-        <p class="plataforma" data-plataforma="ps5">PS5 Exclusivo</p>
-        <div class="precio-container">
-            <p class="precio">$19.000 ARS</p>
-            <button class="btn-agregar-carrito" data-id="SM2-11" data-nombre="Marvel's Spider-Man 2" data-precio="19000" data-plataforma="PS5 Exclusivo" data-imagen="spiderman.jpg">Añadir</button>
-        </div>
-    </div>
-</article>
-
-<article class="producto-card">
-    <img src="imagenes/Tienda/rd2.jpg" alt="Resident Evil 2">
-    <div class="card-content">
-        <h3>Resident Evil 2</h3>
-        <p class="plataforma" data-plataforma="pc ps4 xbox">PC / PS4 / Xbox-XS</p>
-    <div class="precio-container">
-            <p class="precio">$11.000 ARS</p>
-            <button class="btn-agregar-carrito" data-id="RE2-12" data-nombre="Resident Evil 2" data-precio="11000" data-plataforma="PC / PS4 / Xbox-XS" data-imagen="rd2.jpg">Añadir</button>
-        </div>
-    </div>
-</article>
-
-</div> 
-<div class="producto-grid grid-4 catalogo-pagina" id="pagina-2">
-    <article class="producto-card">
-        <img src="imagenes/Tienda/finalfantasy.jpg" alt="Final Fantasy XVI">
-        <div class="card-content">
-            <h3>Final Fantasy XVI</h3>
-            <p class="plataforma" data-plataforma="ps5">PS5 Exclusivo</p>
-            <div class="precio-container">
-                <p class="precio">$8.600 ARS</p>
-                <button class="btn-agregar-carrito" data-id="FF16-13" data-nombre="Final Fantasy XVI" data-precio="8600" data-plataforma="PS5 Exclusivo" data-imagen="finalfantasy.jpg">Añadir</button>
-            </div>
-        </div>
-    </article>
-
-    <article class="producto-card">
-        <img src="imagenes/Tienda/halo.jpg" alt="Halo Infinite">
-        <div class="card-content">
-            <h3>Halo Infinite</h3>
-            <p class="plataforma" data-plataforma="pc xbox">PC / Xbox-XS</p>
-            <div class="precio-container">
-                <p class="precio">$8.000 ARS</p>
-                <button class="btn-agregar-carrito" data-id="HI-14" data-nombre="Halo Infinite" data-precio="8000" data-plataforma="PC / Xbox-XS" data-imagen="halo.jpg">Añadir</button>
-            </div>
-        </div>
-    </article>
-
-    <article class="producto-card">
-        <img src="imagenes/Tienda/hades.jpg" alt="hades">
-        <div class="card-content">
-            <h3>Hades</h3>
-            <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / PS4 / Xbox-XS</p>
-            <div class="precio-container">
-                <p class="precio">$14.000 ARS</p>
-                <button class="btn-agregar-carrito" data-id="HADES-15" data-nombre="Hades" data-precio="14000" data-plataforma="PC / PS5 / PS4 / Xbox-XS" data-imagen="hades.jpg">Añadir</button>
-            </div>
-        </div>
-    </article>
-
-    <article class="producto-card">
-        <img src="imagenes/Tienda/forza.jpg" alt="Forza Horizon 5">
-        <div class="card-content">
-            <h3>Forza Horizon 5</h3>
-            <p class="plataforma" data-plataforma="pc xbox">PC / Xbox-XS</p>
-            <div class="precio-container">
-                <p class="precio">$6.000 ARS</p>
-                <button class="btn-agregar-carrito" data-id="FH5-16" data-nombre="Forza Horizon 5" data-precio="6000" data-plataforma="PC / Xbox-XS" data-imagen="forza.jpg">Añadir</button>
-            </div>
-        </div>
-    </article>
-
-    <article class="producto-card">
-        <img src="imagenes/Tienda/diablo.jpg" alt="Diablo IV">
-        <div class="card-content">
-            <h3>Diablo IV</h3>
-            <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
-            <div class="precio-container">
-                <p class="precio">$9.000 ARS</p>
-                <button class="btn-agregar-carrito" data-id="D4-17" data-nombre="Diablo IV" data-precio="9000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="diablo.jpg">Añadir</button>
-            </div>
-        </div>
-    </article>
-
-    <article class="producto-card">
-        <img src="imagenes/Tienda/harry.jpg" alt="Hogwarts Legacy">
-        <div class="card-content">
-            <h3>Hogwarts Legacy</h3>
-            <p class="plataforma" data-plataforma="pc ps4 ps5 xbox">PC / PS5 / Xbox-XS</p>
-            <div class="precio-container">
-                <p class="precio">$12.000 ARS</p>
-                <button class="btn-agregar-carrito" data-id="HL-18" data-nombre="Hogwarts Legacy" data-precio="12000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="harry.jpg">Añadir</button>
-            </div>
-        </div>
-    </article>
-
-    <article class="producto-card">
-        <img src="imagenes/Tienda/starwarsjedo.jpg" alt="Star Wars Jedi: Survivor">
-        <div class="card-content">
-            <h3>Star Wars Jedi: Survivor</h3>
-            <p class="plataforma" data-plataforma="pc ps5 xbox">PC / PS5 / Xbox-XS</p>
-            <div class="precio-container">
-                <p class="precio">$4.000 ARS</p>
-                <button class="btn-agregar-carrito" data-id="SWJS-19" data-nombre="Star Wars Jedi: Survivor" data-precio="4000" data-plataforma="PC / PS5 / Xbox-XS" data-imagen="starwarsjedo.jpg">Añadir</button>
-            </div>
-        </div>
-    </article>
-
-    <article class="producto-card">
-        <img src="imagenes/Tienda/baldur.jpg" alt="Baldur's Gate 3">
-        <div class="card-content">
-            <h3>Baldur's Gate 3</h3>
-            <p class="plataforma" data-plataforma="pc ps5">PC / PS5</p>
-            <div class="precio-container">
-                <p class="precio">$11.000 ARS</p>
-                <button class="btn-agregar-carrito" data-id="BG3-20" data-nombre="Baldur's Gate 3" data-precio="11000" data-plataforma="PC / PS5" data-imagen="baldur.jpg">Añadir</button>
-            </div>
-        </div>
-    </article>
-</div> 
-<div class="paginacion">
-    <a href="#" class="active" onclick="mostrarPagina(1, event)">1</a>
-    <a href="#" onclick="mostrarPagina(2, event)">2</a>
-    <a href="#" onclick="alert('Esta página aún no está disponible.'); event.preventDefault();">3</a>
-    <a href="#" onclick="alert('Funcionalidad avanzada. ¡Fin del catálogo!'); event.preventDefault();">Siguiente »</a>
-</div>
-
-</section>
+        </section>
         
         <section class="tabla-comparativa" id="comparativa">
             <h2>📊 Tabla Comparativa de Consolas</h2>
@@ -362,13 +502,30 @@
     };
 
     let cart = JSON.parse(localStorage.getItem('imperioGamerCart')) || [];
-
     function saveCart() {
         localStorage.setItem('imperioGamerCart', JSON.stringify(cart));
     }
 
-    window.addToCart = (id, name, price, platform, imageFileName) => {
-        const existingItem = cart.find(item => item.id === id);
+    function mostrarNotificacionCarrito(nombreProducto, tipo) {
+        const notificacion = document.getElementById('notificacion-carrito');
+        const mensaje = document.getElementById('mensaje-carrito');
+        const tipoDisplay = tipo.charAt(0).toUpperCase() + tipo.slice(1);
+
+        if (mensaje && notificacion) {
+            mensaje.textContent = `¡"${nombreProducto}" (${tipoDisplay}) añadido al carrito!`;
+            notificacion.classList.add('mostrar');
+
+            setTimeout(() => {
+                notificacion.classList.remove('mostrar');
+            }, 3000); 
+        }
+    }
+
+    window.addToCart = (id, name, price, platform, imageFileName, tipoCuenta = 'primaria') => {
+        const existingItem = cart.find(item => 
+            item.id === id && 
+            item.tipoCuenta === tipoCuenta 
+        );
 
         if (existingItem) {
             existingItem.quantity += 1;
@@ -379,26 +536,13 @@
                 price: parseFloat(price), 
                 platform: platform,
                 quantity: 1,
-                imageFileName: imageFileName 
+                imageFileName: imageFileName,
+                tipoCuenta: tipoCuenta 
             });
         }
         
-        function mostrarNotificacionCarrito(nombreProducto) {
-            const notificacion = document.getElementById('notificacion-carrito');
-            const mensaje = document.getElementById('mensaje-carrito');
-            
-            if (mensaje && notificacion) {
-                mensaje.textContent = `¡"${nombreProducto}" añadido al carrito!`;
-                notificacion.classList.add('mostrar');
-
-                setTimeout(() => {
-                    notificacion.classList.remove('mostrar');
-                }, 3000); 
-            }
-        }
-
         saveCart();
-        mostrarNotificacionCarrito(name);
+        mostrarNotificacionCarrito(name, tipoCuenta);
     };
 
     const imgElement = document.getElementById('img-witcher');
@@ -482,18 +626,55 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-
         mostrarPagina(1, { preventDefault: () => {} });
+        const DESCUENTO_SECUNDARIA = 0.65; 
+        const calcularPrecioSecundario = (precioBase) => {
+            return Math.round(precioBase * DESCUENTO_SECUNDARIA);
+        };
+
+        const formatearPrecio = (precio) => {
+            return `$${precio.toLocaleString('es-AR')} ARS`;
+        };
+
+        const actualizarPrecio = (selectElement) => {
+            const card = selectElement.closest('.producto-card'); 
+            const precioBase = parseFloat(selectElement.dataset.precioBase);
+            const tipoCuenta = selectElement.value;
+            const btnAñadir = card.querySelector('.btn-agregar-carrito'); 
+            const spanPrecioActual = card.querySelector('.precio-actual');
+            
+            let nuevoPrecio;
+
+            if (tipoCuenta === 'secundaria') {
+                nuevoPrecio = calcularPrecioSecundario(precioBase);
+            } else {
+                nuevoPrecio = precioBase;
+            }
+            spanPrecioActual.textContent = formatearPrecio(nuevoPrecio);
+            btnAñadir.dataset.precio = nuevoPrecio; 
+            btnAñadir.dataset.tipo = tipoCuenta; 
+        };
+        const selectoresCuenta = document.querySelectorAll('.tipo-cuenta-select');
+        selectoresCuenta.forEach(select => {
+            actualizarPrecio(select); 
+            select.addEventListener('change', (e) => {
+                actualizarPrecio(e.target);
+            });
+        });
+        
         document.querySelectorAll('.btn-agregar-carrito').forEach(button => {
             button.addEventListener('click', (e) => {
-                const btn = e.target;
+                const btn = e.currentTarget;
                 const image = btn.dataset.imagen; 
+                const tipoCuenta = btn.dataset.tipo || 'primaria';
+                
                 window.addToCart(
                     btn.dataset.id,
                     btn.dataset.nombre,
                     btn.dataset.precio,
                     btn.dataset.plataforma,
-                    image 
+                    image,
+                    tipoCuenta 
                 );
             });
         });
@@ -529,10 +710,5 @@
     <div id="notificacion-carrito">
     <p id="mensaje-carrito"></p>
 </div>
-
 </body>
-
 </html>
-
-
-
